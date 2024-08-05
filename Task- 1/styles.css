@@ -1,0 +1,125 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(123, 125, 134, 0.85);
+    color: #333;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #93c2f1;
+    font-size: 18px;
+    padding: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #61a0ff;
+}
+
+.parallax-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#section1 {
+    background-image: url('image1.jpg.jpg');
+}
+
+#section2 {
+    background-image: url('image2.jpg.jpg');
+}
+
+#section3 {
+    background-image: url('image3.jpg.jpg');
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#b0bec5;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px; 
+    margin: 0;
+    color: #61a0ff;
+    text-decoration: underline;
+}
+
+.content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px; 
+    color: #b0bec5;
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 40px; 
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+}
+
+.parallax-section.fade-in {
+    animation: fadeIn 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
